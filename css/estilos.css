@@ -1,0 +1,42 @@
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Comic Sans MS','Segoe UI',sans-serif}
+html{scroll-behavior:smooth}
+body{background:#FFF8E7;color:#222}
+header{background:#0B6E2F;color:white;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;border-bottom:6px solid #C62828;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:10}
+header h1{font-size:22px}
+nav a{color:white;text-decoration:none;margin:0 8px;font-weight:bold}
+nav a:hover{color:#FFD700}
+.hero{background:#1A9E4B;color:white;text-align:center;padding:40px 20px;background-image:radial-gradient(#fff 1.5px, transparent 1.5px);background-size:30px 30px}
+.hero h2{font-size:36px;text-shadow:2px 2px #0B6E2F}
+.hero p{font-size:18px;margin-top:10px}
+.luces{font-size:28px;letter-spacing:8px}
+.contenedor{display:flex;gap:20px;padding:25px;flex-wrap:wrap;justify-content:center}
+.card{background:white;border:3px solid #0B6E2F;border-radius:15px;padding:20px;flex:1;min-width:300px;max-width:650px;box-shadow:5px 5px 0 #C62828}
+.card h3{color:#0B6E2F;font-size:24px;margin-bottom:12px}
+.card ul{margin-left:18px;line-height:1.7}
+.fotos{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.foto{flex:1;min-width:140px;max-width:190px;text-align:center}
+.foto img{width:100%;height:130px;object-fit:cover;border-radius:10px;border:3px solid #C62828;cursor:pointer;transition:0.2s}
+.foto img:hover{transform:scale(1.05);border-color:#FFD700}
+.foto p{font-weight:bold;margin-top:6px;font-size:13px}
+.formulario{max-width:1100px;margin:0 auto 25px;background:white;border:3px solid #0B6E2F;border-radius:15px;padding:25px;box-shadow:5px 5px 0 #0B6E2F}
+.formulario h3{color:#0B6E2F;font-size:26px;margin-bottom:15px;text-align:center}
+.fila{display:flex;gap:20px;flex-wrap:wrap}
+.campo{flex:1;min-width:250px;margin-bottom:15px}
+label{font-weight:bold;display:block;margin-bottom:6px}
+input, textarea{width:100%;padding:12px;border:2px solid #0B6E2F;border-radius:10px;font-size:15px}
+textarea{height:110px;resize:none}
+.estrellas{font-size:35px;cursor:pointer;color:#ccc}
+.estrellas span.activa{color:#FFC107}
+button{background:#C62828;color:white;border:none;padding:14px 30px;font-size:18px;font-weight:bold;border-radius:30px;cursor:pointer;display:block;margin:10px auto 0}
+button:hover{background:#0B6E2F}
+#mensaje{text-align:center;margin-top:12px;font-weight:bold;color:#0B6E2F}
+footer{background:#0B6E2F;color:white;text-align:center;padding:20px}
+footer b{color:#FFD700}
+/* Reseñas guardadas */
+.resena-card{background:#FFF8E7;border:2px solid #0B6E2F;border-radius:12px;padding:15px;margin-top:12px}
+.resena-card b{color:#0B6E2F}
+.resena-card .stars{color:#FFC107;font-size:20px}
+/* Visor de fotos */
+#visor{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:99;justify-content:center;align-items:center;flex-direction:column}
+#visor img{max-width:90%;max-height:80%;border:5px solid white;border-radius:10px}
+#visor span{color:white;font-weight:bold;margin-bottom:10px;cursor:pointer;font-size:18px}

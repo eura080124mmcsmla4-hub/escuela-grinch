@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escuela Primaria Monte Crumpit</title>
+<link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+
+<header>
+  <h1>🎄💚 Escuela Primaria Monte Crumpit</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#fotos">Fotos</a>
+    <a href="#resenas">Reseñas</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="luces">🔴 🟢 🔴 🟢 🔴 🟢</div>
+  <h2>¡Felices Fiestas en la Escuela!</h2>
+  <p>Aprender, Crecer y Soñar... ¡con espíritu navideño!</p>
+  <p>❄️ 🎁 🎅 ❄️</p>
+  <button onclick="document.getElementById('resenas').scrollIntoView({behavior:'smooth'})">✍️ Dejar mi reseña</button>
+</section>
+
+<div class="contenedor">
+  <div class="card" id="nosotros">
+    <h3>🎄 Sobre la Escuela</h3>
+    <ul>
+      <li>Fundada en 1995, celebramos el valor, la amistad y la alegría navideña.</li>
+      <li>Educación primaria de 1° a 6° grado, con taller de manualidades de invierno.</li>
+      <li>Turno matutino y vespertino. ¡Actividades de temporada!</li>
+    </ul>
+    <p><b>⭐ Promedio: <span id="promedio">4.3</span> ★ • <span id="totalResenas">3</span> reseñas</b></p>
+  </div>
+
+  <div class="card" id="fotos">
+    <h3>📸 Fotos de la escuela: <small>(pícale a una foto)</small></h3>
+    <div class="fotos">
+      <div class="foto"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600" alt="Fachada" onclick="abrirFoto(this.src)"><p>Fachada del plantel</p></div>
+      <div class="foto"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600" alt="Patio" onclick="abrirFoto(this.src)"><p>Patio y áreas verdes</p></div>
+      <div class="foto"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600" alt="Salón" onclick="abrirFoto(this.src)"><p>Salón de clases</p></div>
+      <div class="foto"><img src="https://images.unsplash.com/photo-1587616211892-f743fcca64f9?w=600" alt="Biblioteca" onclick="abrirFoto(this.src)"><p>Biblioteca</p></div>
+      <div class="foto"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600" alt="Festival" onclick="abrirFoto(this.src)"><p>Festival Navideño</p></div>
+      <div class="foto"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600" alt="Clases" onclick="abrirFoto(this.src)"><p>Clases y talleres</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- FOTO EN GRANDE -->
+<div id="visor" onclick="cerrarFoto()">
+  <span>✖ Cerrar</span>
+  <img id="fotoGrande" src="">
+</div>
+
+<div class="formulario" id="resenas">
+  <h3>🎅 Formulario de Reseña 🎄</h3>
+  <div class="fila">
+    <div class="campo">
+      <label>Nombre:</label>
+      <input type="text" id="nombre" placeholder="Escribe tu nombre">
+    </div>
+    <div class="campo">
+      <label>Correo:</label>
+      <input type="email" id="correo" placeholder="tu@correo.com">
+    </div>
+  </div>
+  <div class="campo">
+    <label>Calificación:</label>
+    <div class="estrellas" id="estrellas">
+      <span data-valor="1">★</span><span data-valor="2">★</span><span data-valor="3">★</span><span data-valor="4">★</span><span data-valor="5">★</span>
+      <small id="textoEstrella">(3 de 5 estrellas)</small>
+    </div>
+  </div>
+  <div class="campo">
+    <label>Tu reseña:</label>
+    <textarea id="resena" placeholder="Cuéntanos qué te gustó de la escuela..."></textarea>
+  </div>
+  <button onclick="enviar()">🎁 Enviar reseña</button>
+  <p id="mensaje"></p>
+
+  <h3 style="margin-top:30px">💬 Reseñas de otros papás y alumnos:</h3>
+  <div id="listaResenas"></div>
+</div>
+
+<footer id="contacto">
+  <b>Escuela Primaria Monte Crumpit</b><br>
+  Dirección: Calle Pinos 123, Monte Crumpit | Tel: 55-1234-5678<br>
+  ¡Temporada Verde Grinch! 💚
+</footer>
+
+<script src="Js/script.js"></script>
+</body>
+</html>
